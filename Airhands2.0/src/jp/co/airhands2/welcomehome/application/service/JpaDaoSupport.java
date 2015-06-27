@@ -28,7 +28,7 @@ public class JpaDaoSupport<K extends Serializable, E extends PersistenceEntity> 
     private Class<E> entityClass;
 
     /** 永続化コンテキスト */
-    @PersistenceContext(unitName = "Airhands2.0")
+    @PersistenceContext(unitName = "Airhands2")
     protected EntityManager em;
 
     /**
