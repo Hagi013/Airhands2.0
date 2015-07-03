@@ -30,7 +30,7 @@ public class AmenityType extends PersistenceEntity{
     private String amenityTypeName;
 
 	@OneToMany(targetEntity = Amenity.class, mappedBy = "amenityType", cascade = CascadeType.ALL)
-	@JoinColumn(name = "amenity_type")
+	@JoinColumn(name = "amenity_type_id")
 	private List<Amenity> amenityTypeIds;
 
 	

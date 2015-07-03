@@ -30,7 +30,7 @@ public class RoomType extends PersistenceEntity{
     
     @OneToMany(targetEntity = Home.class, mappedBy = "roomType", cascade = CascadeType.ALL)
     @JoinColumn(name = "roomTypeId")
-    private List<RoomType> roomTypeIds;
+    private List<Home> roomTypeIds;
 
 	
 	
@@ -54,12 +54,12 @@ public class RoomType extends PersistenceEntity{
         this.roomTypeName = roomTypeName;
     }
 
-    public List<RoomType> getRoomTypeIds()
+    public List<Home> getRoomTypeIds()
     {
         return roomTypeIds;
     }
 
-    public void setRoomTypeIds(List<RoomType> roomTypeIds)
+    public void setRoomTypeIds(List<Home> roomTypeIds)
     {
         this.roomTypeIds = roomTypeIds;
     }

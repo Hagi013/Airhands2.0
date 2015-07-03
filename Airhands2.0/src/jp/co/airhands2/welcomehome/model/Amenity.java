@@ -10,6 +10,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
@@ -31,7 +32,7 @@ public class Amenity extends PersistenceEntity{
     /*amenity_type_id(Amenity_typeテーブルのamenity_type_idを外部参照している。)
     */
     @ManyToOne(targetEntity = AmenityType.class)
-    @Column(name = "amenity_type_id", nullable = false,  unique = true)
+    @JoinColumn(name = "amenity_type_id", nullable = false,  unique = true)
     private AmenityType amenityType;
     
     @Column(name = "amenity_name", nullable = false,  unique = true)

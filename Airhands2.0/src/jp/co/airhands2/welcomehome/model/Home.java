@@ -41,11 +41,12 @@ public class Home extends PersistenceEntity{
     @JoinColumn(name = "room_type_id", nullable = false)
     private RoomType roomType;
     
-    @NotBlank(message = "収容人数を選択してください。")
+    
     @Column(name = "number_of_room", nullable = false)
     private int numberOfRoom;
-    
-    @Column(name = "number_of_room")
+  
+    @NotBlank(message = "収容人数を選択してください。")
+    @Column(name = "capacity")
     private String capacity;
 
     @NotBlank(message = "ロケーションを選択してください。")    

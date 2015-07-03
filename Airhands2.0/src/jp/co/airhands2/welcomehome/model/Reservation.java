@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import jp.co.airhands2.welcomehome.application.model.PersistenceEntity;
 
@@ -27,9 +29,11 @@ public class Reservation extends PersistenceEntity{
     @JoinColumn(name = "home_id", insertable = false, updatable = false)
     private Home home;
     
+    @Temporal(value = TemporalType.DATE)
     @Column(name = "data_from", nullable= false)
     private Date dateFrom;
     
+    @Temporal(value = TemporalType.DATE)
     @Column(name = "data_to", nullable= false)
     private Date dateTo;
 

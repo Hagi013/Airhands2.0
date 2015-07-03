@@ -1,7 +1,3 @@
-// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://www.kpdus.com/jad.html
-// Decompiler options: packimports(3) 
-// Source File Name:   LoginController.java
 
 package jp.co.airhands2.welcomehome.controller;
 
@@ -11,15 +7,11 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import jp.co.airhands.lenthouse.application.controller.BaseController;
-import jp.co.airhands.lenthouse.helper.Facebook4j;
+import jp.co.airhands2.welcomehome.application.controller.BaseController;
+/*import jp.co.airhands2.welcomehome.helper.Facebook4j;
+*/
+public class LoginController extends BaseController{
 
-public class LoginController extends BaseController
-{
-
-    public LoginController()
-    {
-    }
 
     public String getMessage()
     {
@@ -51,7 +43,7 @@ public class LoginController extends BaseController
         this.inputPassword = inputPassword;
     }
 
-    public String singIn()
+    /*public String singIn()
         throws ServletException, IOException
     {
         HttpServletRequest request = getRequest();
@@ -66,9 +58,9 @@ public class LoginController extends BaseController
                 return null;
             }
         return redirectTo("");
-    }
+    }*/
 
-    public String singInByFacebook(HttpServletRequest request, HttpServletResponse response)
+/*    public String singInByFacebook(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException, FacebookException
     {
         Facebook facebook = facebook4j.getFacebook();
@@ -93,10 +85,10 @@ public class LoginController extends BaseController
             throw new ServletException(e);
         }
         return redirectTo("");
-    }
+    }*/
 
     private static final long serialVersionUID = 0x5f6f66d3f607ac8cL;
-    private Facebook4j facebook4j;
+/*    private Facebook4j facebook4j;*/
     private String message;
     private String inputLoginId;
     private String inputPassword;

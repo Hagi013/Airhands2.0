@@ -24,11 +24,16 @@ import jp.co.airhands2.welcomehome.application.model.PersistenceEntity;
 
 public class JpaDaoSupport<K extends Serializable, E extends PersistenceEntity> implements Serializable {
 
-    /** 対象のEntityクラス */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4059973236338994761L;
+
+	/** 対象のEntityクラス */
     private Class<E> entityClass;
 
     /** 永続化コンテキスト */
-    @PersistenceContext(unitName = "Airhands2")
+    @PersistenceContext(unitName = "Airhands2.0")
     protected EntityManager em;
 
     /**
